@@ -1,0 +1,314 @@
+/* Font Awesome Library Icon stylesheet */
+@import url(all.min.css);
+/* Bootstrap stylesheet */
+@import url(bootstrap.min.css);
+/* Fonts */
+
+
+/* ========== General Styles ========== */
+:root {
+    /* Colors */
+    --white: 255, 255, 255;
+    --black: 0, 0, 0;
+
+    --gray: 206, 212, 218;
+    --dark-teal: 36, 53, 63;
+    --eastern-blue: 23, 162, 184;
+    --sky-blue: 128, 189, 255;
+    --dark-green: 40, 167, 69;
+    --ruby: 220, 53, 69;
+    --amber: 255, 193, 7;
+
+    --maroon: 86, 28, 36;
+    --beige: 232, 216, 196;
+    --coffee: 199, 183, 163;
+
+    --peach: 239, 188, 155;
+    --sage: 214, 218, 200;
+    --dark-sage: 101,116,61;
+
+    --dark-purple: 48, 25, 52;
+    --magenta: 194, 18, 146;
+    --dark-orange: 239, 64, 64;
+    --light-orange: 255, 167, 50;
+
+    /* Colors' roles */
+    --bg-main: rgba(var(--dark-teal), var(--opacity));
+
+    --text-general: rgba(var(--white), var(--opacity));
+    --text-main: rgba(var(--eastern-blue), var(--opacity));
+    --text-sub: rgba(var(--gray), var(--opacity));
+    --text-pass: rgba(var(--dark-green), var(--opacity));
+    --text-fail: rgba(var(--ruby), var(--opacity));
+
+    --btn-amber: rgba(var(--amber), var(--opacity));
+    --btn-eastern-blue: rgba(var(--eastern-blue), var(--opacity));
+
+    /* Opacity */
+    --opacity: 1;
+    --opacity-90: 0.9;
+    --opacity-75: 0.75;
+
+    /* Fonts */
+    --font-general: sans-serif;
+    --bs-body-line-height: 1.2;
+
+    /* Animation options */
+    --animation-duration: 0.35s; 
+}
+
+/* ========== Override Styles ========== */
+body, body.teal {
+    background-color: var(--bg-main);
+    font-family: var(--font-general);
+    color: var(--color-general);
+}
+/* body.maroon {
+    --bg-main: rgba(var(--maroon), var(--opacity));
+    --text-main: rgba(var(--coffee), var(--opacity));
+    --text-fail: rgba(var(--amber), var(--opacity));
+}
+body.peach {
+    --bg-main: rgba(var(--peach), var(--opacity));
+    --text-main: rgba(var(--dark-sage), var(--opacity));
+}
+body.purple {
+    --bg-main: rgba(var(--dark-purple), var(--opacity));
+    --text-main: rgba(var(--light-orange), var(--opacity));
+    --text-fail: rgba(var(--amber), var(--opacity));
+} */
+h1, h2, h3, h4, h5, h6, p {
+    word-break: break-word;
+    text-wrap: wrap;
+}
+.form-control {
+    --bs-body-color: var(--bg-general);
+    --bs-body-bg: var(--bg-main);
+    --bs-border-radius: 0.25rem;
+
+    height: calc(2.25rem + 2px);
+}
+.form-control:focus {
+    border-color: var(var(--sky-blue), var(--opacity));
+    box-shadow: none;
+}
+.form-control::placeholder {color: var(--text-sub);}
+.btn {--bs-btn-hover-color: var(--text-general);}
+.btn-outline-info {
+    --bs-btn-color: var(--btn-eastern-blue);
+    --bs-btn-border-color: var(--btn-eastern-blue);
+    --bs-btn-hover-bg: var(--btn-eastern-blue);
+    --bs-btn-hover-border-color: var(--btn-eastern-blue);
+    --bs-btn-active-bg: var(--btn-eastern-blue);
+    --bs-btn-active-border-color: var(--btn-eastern-blue);
+    --bs-btn-disabled-color: var(--btn-eastern-blue);
+    --bs-btn-disabled-border-color: var(--btn-eastern-blue);
+}
+.link-underline {--bs-link-color-rgb: var(--white);}
+a:hover {--bs-link-hover-color-rgb: var(--white);}
+.btn-outline-warning {
+    --bs-btn-color: rgba(var(--white), 0.5);
+}
+.bg-body-tertiary {
+    --bs-tertiary-bg-rgb: var(--bg-main) !;
+}
+
+/* ========== Costumized Styles ========== */
+.bg-main {background-color: var(--bg-main);}
+
+.text-general {color: var(--text-general);}
+.text-main {color: var(--text-main);}
+.text-sub {color: var(--text-sub);}
+.text-pass {color: var(--text-pass);}
+.text-fail {color: var(--text-fail);}
+
+.font-general {font-family: var(--font-general);}
+
+.w-fit {
+    width: fit-content;
+}
+
+.opacity-90 {opacity: var(--opacity-90);}
+
+.shadow-a {box-shadow: -5px 2px 54px -9px rgba(var(--black), var(--opacity));}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* ========== Login Page ========== */
+
+
+/* ========== Signup Page ========== */
+
+
+/* ========== Home Page ========== */
+header .bg-main,
+#welcome-sec .bg-main {--bg-main: rgba(var(--dark-teal), var(--opacity-75));}
+
+header .dropdown-menu {--bs-dropdown-bg: rgba(var(--dark-teal), var(--opacity-75));}
+
+header .dropdown-item>input {display: none;}
+header .dropdown-item>label {
+    width: 3rem; 
+    height: 3rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: var(--animation-duration);
+    position: relative;
+}
+header .dropdown-item:has(#teal)>label {background-color: rgba(var(--dark-teal), var(--opacity));}
+header .dropdown-item:has(#maroon)>label {background-color: rgba(var(--maroon), var(--opacity));}
+header .dropdown-item:has(#peach)>label {background-color: rgba(var(--peach), var(--opacity));}
+header .dropdown-item:has(#purple)>label {background-color: rgba(var(--dark-purple), var(--opacity));}
+
+header .dropdown-item>label:hover {
+    --opacity: 0.9;
+
+    transform: scale(1.1);
+}
+header .dropdown-item>label::before,
+header .dropdown-item>label::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(var(--text-main), var(--opacity));
+    bottom: -0.5rem;
+    right: -0.5rem;
+    border-radius: 50%;
+    transition: var(--animation-duration);
+}
+header .dropdown-item>label::before {
+    --text-main: var(--eastern-blue);
+
+    width: 2rem;
+    height: 2rem;
+}
+header .dropdown-item>label::after {
+    --text-main:var(--gray);
+    --animation-duration: 1s;
+
+    width: 1.5rem;
+    height: 1.5rem;
+}
+header .dropdown-item>label:hover::before,
+header .dropdown-item>label:hover::after {
+    bottom: 0rem;
+    right: 0rem;
+}
+
+header .dropdown-item:has(#maroon)>label::before {--text-main: var(--coffee);}
+header .dropdown-item:has(#maroon)>label::after {--text-main: var(--beige);}
+header .dropdown-item:has(#peach)>label::before {--text-main: var(--dark-sage);}
+header .dropdown-item:has(#peach)>label::after {--text-main: var(--sage);}
+header .dropdown-item:has(#purple)>label::before {--text-main: var(--light-orange);}
+header .dropdown-item:has(#purple)>label::after {--text-main: var(--dark-orange);}
+
+/* ========== Img-slider ========== */
+#img-slider {
+    position: absolute;
+    /* background-image: url('../img/majestic-mountain-peak-tranquil-winter-landscape-generated-by-ai.jpg'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    inset: 0;
+}
+
+#img-slider>.btn {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+#img-slider>.btn-success {
+    position: absolute;
+    right: 100px;
+}
+
+
+
+/* ========== Media Query ========== */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+}
+
+/* Large devices (Screens, 992px and up) */
+@media (min-width: 992px) { 
+
+}
+
+
+
+/* ========== Color themes ========== */
+:where(html) {
+    --theme: 0;
+    container-name: root;
+    container-type: normal;
+}
+
+@media (prefers-color-scheme: teal) {
+    html { --theme: 0; }
+}
+
+@media (prefers-color-scheme: maroon) {
+    html { --theme: 1; }
+}
+
+@media (prefers-color-scheme: peach) {
+    html { --theme: 2; }
+}
+
+@media (prefers-color-scheme: purple) {
+    html { --theme: 3; }
+}
+
+html:has(#teal:checked) { --theme: 0; }
+html:has(#maroon:checked) { --theme: 1; }
+html:has(#peach:checked) { --theme: 2; }
+html:has(#purple:checked) { --theme: 3; }
+
+@container root style(--theme: 1) {
+    body {
+        --bg-main: rgba(var(--maroon), var(--opacity));
+        --text-main: rgba(var(--coffee), var(--opacity));
+        --text-fail: rgba(var(--amber), var(--opacity));
+    }
+    header .bg-main,
+    #welcome-sec .bg-main {--bg-main: rgba(var(--maroon), var(--opacity-75));}
+    header .dropdown-menu {--bs-dropdown-bg: rgba(var(--beige), var(--opacity-75));}
+}
+@container root style(--theme: 2) {
+    body {
+        --bg-main: rgba(var(--peach), var(--opacity));
+        --text-main: rgba(var(--dark-sage), var(--opacity));
+    }
+    header .navbar-brand, header #logout {
+        color: var(--text-main) !important;
+    }
+    header .bg-main,
+    #welcome-sec .bg-main {--bg-main: rgba(var(--peach), var(--opacity-75));}
+    header .dropdown-menu {--bs-dropdown-bg: rgba(var(--dark-sage), var(--opacity-75));}
+}
+@container root style(--theme: 3) {
+    body {
+        --bg-main: rgba(var(--dark-purple), var(--opacity));
+        --text-main: rgba(var(--light-orange), var(--opacity));
+        --text-fail: rgba(var(--amber), var(--opacity));
+    }
+    header .bg-main,
+    #welcome-sec .bg-main {--bg-main: rgba(var(--dark-purple), var(--opacity-75));}
+    header .dropdown-menu {--bs-dropdown-bg: rgba(var(--dark-orange), var(--opacity-75));}
+}
