@@ -87,7 +87,10 @@ if(location.pathname == '/home.html') {
         //     changeTheme('maroon');
     // });
         
-    // localStorage.setItem('theme', 0);  //Hashed because it's for being used once. or every time theme will always == 0 when reload
+    if (!localStorage.getItem(itemName)) {
+        // Set the value for the first time
+        localStorage.setItem('theme', 0);
+    }
     themeSwitcher.addEventListener('change', (event) => {
         var selectedTheme = event.target.value;
         document.documentElement.style.setProperty('--theme', selectedTheme);
