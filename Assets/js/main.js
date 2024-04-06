@@ -87,7 +87,7 @@ if(location.pathname == '/home.html') {
         //     changeTheme('maroon');
     // });
         
-    if (!localStorage.getItem(itemName)) {
+    if (!localStorage.getItem('theme')) {
         // Set the value for the first time
         localStorage.setItem('theme', 0);
     }
